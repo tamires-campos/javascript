@@ -1,4 +1,5 @@
-// let const
+// let const  - "var" caiu em desuso
+// "const" é utilizada para um valor contante, que nã oirá mudar  
 
 const primeiroValor = 10;
 const segundoValor = 20;
