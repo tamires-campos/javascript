@@ -24,9 +24,82 @@
 
         <script>
             
-            
+          var n1 = Number(window.prompt('Digite um número: '))  
+          var n2 = Number(window.prompt('Digite outro número: '))  
+          var s = n1 + n2
+          window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
 
         </script>
+
+        <!--
+            🧠 Conversões em JavaScript
+            🔢 Converter String para Número
+            Método	                  Descrição
+            Number.parseInt(n)	      Converte para número inteiro
+            Number.parseFloat(n)      Converte para número decimal
+            Number(n)	              Converte para número automaticamente (inteiro ou decimal, conforme o valor)
+
+
+            🔠 Converter Número para String
+            Método	        Descrição
+            String(n)	    Converte número em string
+            n.toString()	Também converte número em string
+
+
+            ➕ Operador + (soma ou concatenação)
+            Situação	           Resultado	                     Exemplo
+            string + string	       Concatena (junta os textos)	     "Oi " + "Tamires" → "Oi Tamires"
+            número + número	       Soma matemática	                 10 + 5 → 15
+
+            💬 Template String
+            Usa crase ` (e não aspas simples ou duplas)
+
+            Pode inserir variáveis com ${variável}
+            📌 Exemplo:
+            let nome = "Tamires";
+            console.log(`Olá, ${nome}!`);
+
+
+
+            ✍️ Manipulação de Strings
+            Método	                      Função	                                                      Exemplo
+            s.length	                  Retorna o tamanho da string	                                  "Olá".length → 3
+            s.toUpperCase()	              Transforma em maiúsculas	                                      "tamires".toUpperCase() → "TAMIRES"
+            s.toLowerCase()	              Transforma em minúsculas	                                      "TAMIRES".toLowerCase() → "tamires"
+            s.trim()	                  Remove espaços em branco no início e fim	                      " oi ".trim() → "oi"
+            s.includes("txt")	          Verifica se a string contém um texto específico	              "Olá mundo".includes("mundo") → true
+            s.startsWith("txt")	          Verifica se a string começa com determinado texto	              "JavaScript".startsWith("Java") → true
+            s.endsWith("txt")	          Verifica se a string termina com determinado texto	          "imagem.png".endsWith(".png") → true
+            s.replace("antigo", "novo")	  Substitui parte da string	                                      "Olá, mundo".replace("mundo", "Tamires") → "Olá, Tamires"
+            s.slice(início, fim)	      Retorna parte da string (posição inicial e final)	              "JavaScript".slice(0, 4) → "Java"
+            s.substring(início, fim)	  Parecido com slice, mas sem aceitar números negativos	          "JavaScript".substring(4, 10) → "Script"
+            s.split("separador")	      Divide a string em partes e retorna um array	                  "nome,sobrenome".split(",") → ["nome", "sobrenome"]
+
+            
+            💰 Formatação de Números em JavaScript
+            🔢 n1.toFixed(2)
+            O que faz: Arredonda o número e retorna uma string com 2 casas decimais
+
+            Exemplo:
+            let n1 = 10;
+            console.log(n1.toFixed(2)); // "10.00"
+
+            🌍 n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            O que faz: Formata o número como moeda, de acordo com o idioma e estilo definidos.
+
+            Neste exemplo: Exibe o número no formato de real brasileiro (R$), com pontuação correta.
+
+            Exemplo:  
+            let n1 = 2599.99;
+            console.log(n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+            // "R$ 2.599,99"
+
+
+            📝 Você também pode usar outros formatos:
+
+            style: 'percent' → formata como porcentagem
+            style: 'decimal' → formata como número decimal com separadores locais
+        -->
 
     </body>
 </html>
