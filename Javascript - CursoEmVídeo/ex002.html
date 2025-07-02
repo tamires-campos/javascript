@@ -1,103 +1,68 @@
-
-💡 Tipos de Dados e Variáveis em JavaScript
-
-🟨 1. Variáveis
-O sinal de igual = em JavaScript significa "receber" ou "atribuir um valor", e não "igualdade".
-EX: 
-let nome = "Tami"; // nome recebe "Tami"
-
-
-🟫 2. Aspas (Strings)
-Para textos, você pode usar:
-
-Aspas duplas → "texto"
-
-Aspas simples → 'texto'
-
-Crase (template string) → `texto` ← permite usar variáveis com ${}
-EX:
-let nome = "Tamires";
-let frase = `Olá, ${nome}!`; // Olá, Tamires!
-
-🔡 3. Identificadores (nomes de variáveis)
-Nomes de variáveis podem começar com:
-
-✅ Letra: nome, idade
-
-✅ Sinal de cifrão $: $saldo
-
-✅ Sinal de underline _: _usuario
-
-❌ Não podem:
-
-Começar com número: 2coisas ❌
-
-Conter espaços: meu nome ❌
-
-Ser palavras reservadas: function, var, let, etc. ❌
-
-
-⚠️ JavaScript diferencia maiúsculas e minúsculas:
-
-let nome = "Ana";  
-let Nome = "João";
-
-console.log(nome); // Ana
-console.log(Nome); // João
-
-
-📦 4. Tipos de Dados (Data Types)
-Você pode usar typeof para descobrir o tipo de um dado:
-EX: console.log(typeof 5); // "number"
-
-
-🔢 Number (números)
-- Inteiros: 5, 18, -12
-
-- Decimais (reais): 3.14, 0.5, -15.9
-
-- Especiais:
-    Infinity → infinito
-    NaN → "Not a Number" (erro de cálculo)
-
-
-
-🧵 String (textos)
-    "Google"
-    'JavaScript'
-     Maria
-
-
-✅ Boolean (verdadeiro ou falso)
-    true → verdadeiro
-    false → falso
-
-
-
-🕳️ Null
-    Valor nulo, propositalmente vazio
-    EX: let idade = null;
-
-
-❓ Undefined
-    Algo que ainda não foi definido
-    EX: let nome;
-        console.log(nome); // undefined
-
-
-📦 Object (objetos e arrays)
-    Conjunto de dados
-    EX: let pessoa = {
-            nome: "Tamires",
-            idade: 24
-        };
-
-    Array (lista de valores):
-    EX: let frutas = ["maçã", "banana", "uva"];
-
-
-⚙️ Function (funções)
-    Blocos de código que podem ser chamados:
-    EX: function dizerOla() {
-            console.log("Olá!");
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando javascript</title>
+    <style>
+        body{
+            background-color: rgb(116, 116, 195);
+            color: white;
+            font: normal 20pt arial;
         }
+
+        h1{
+            color: rgb(255, 180, 40);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.552);
+            /*Isso é um comentário em CSS*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>    
+    <p>Já me livrei da maldição!</p> <!--Isso é um comentário em HTML-->
+
+    <script>
+        
+        var nome = window.prompt('Qual o seu nome?') // "prompt" serve para perguntar, neste caso o nome do usuario. 
+        window.alert('é um prazer te conhecer, ' + nome + '!') // esse sinal de "+" é uma concatenação. Precisamos lembrar que ela irá juntar tudo e se quisermos dar espaços, precisamos considerar no cód.
+
+    </script>
+
+    <!--
+    📚 Anotações de JavaScript — Interações Básicas
+        ➕ Concatenação com +
+        O sinal de + em JavaScript serve para juntar (concatenar) textos (strings).
+        Se quisermos adicionar espaços entre as palavras, precisamos colocá-los manualmente dentro das aspas:
+        EX:
+        let nome = "Tamires";
+        console.log("Olá, " + nome + "!"); // Resultado: Olá, Tamires!
+
+        💬 prompt() – Perguntar algo ao usuário
+        Serve para exibir uma caixinha de input e capturar o que o usuário digitar:
+        EX: let nome = prompt("Qual é o seu nome?");
+
+        🚨 alert() – Exibir um alerta na tela
+        Mostra uma mensagem de aviso simples em uma caixinha:
+        EX: alert("Bem-vinda, Tamires!");
+
+        ❓ confirm() – Confirmar ou cancelar
+        Exibe uma mensagem com botões “OK” e “Cancelar”, retornando true se clicar em OK e false se clicar em Cancelar:
+        EX: let resposta = confirm("Você deseja continuar?");
+
+
+        💡 Dica bônus: Juntando tudo!
+        
+        let nome = prompt("Qual é o seu nome?");
+        let continuar = confirm("Você quer ver uma mensagem?");
+        if (continuar) {
+            alert("Olá, " + nome + "! Seja bem-vinda!");
+        } else {
+            alert("Tudo bem, até a próxima!");
+        }
+
+
+    -->
+    
+</body>
+</html>
