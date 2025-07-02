@@ -1,0 +1,103 @@
+
+💡 Tipos de Dados e Variáveis em JavaScript
+
+🟨 1. Variáveis
+O sinal de igual = em JavaScript significa "receber" ou "atribuir um valor", e não "igualdade".
+EX: 
+let nome = "Tami"; // nome recebe "Tami"
+
+
+🟫 2. Aspas (Strings)
+Para textos, você pode usar:
+
+Aspas duplas → "texto"
+
+Aspas simples → 'texto'
+
+Crase (template string) → `texto` ← permite usar variáveis com ${}
+EX:
+let nome = "Tamires";
+let frase = `Olá, ${nome}!`; // Olá, Tamires!
+
+🔡 3. Identificadores (nomes de variáveis)
+Nomes de variáveis podem começar com:
+
+✅ Letra: nome, idade
+
+✅ Sinal de cifrão $: $saldo
+
+✅ Sinal de underline _: _usuario
+
+❌ Não podem:
+
+Começar com número: 2coisas ❌
+
+Conter espaços: meu nome ❌
+
+Ser palavras reservadas: function, var, let, etc. ❌
+
+
+⚠️ JavaScript diferencia maiúsculas e minúsculas:
+
+let nome = "Ana";  
+let Nome = "João";
+
+console.log(nome); // Ana
+console.log(Nome); // João
+
+
+📦 4. Tipos de Dados (Data Types)
+Você pode usar typeof para descobrir o tipo de um dado:
+EX: console.log(typeof 5); // "number"
+
+
+🔢 Number (números)
+- Inteiros: 5, 18, -12
+
+- Decimais (reais): 3.14, 0.5, -15.9
+
+- Especiais:
+    Infinity → infinito
+    NaN → "Not a Number" (erro de cálculo)
+
+
+
+🧵 String (textos)
+    "Google"
+    'JavaScript'
+     Maria
+
+
+✅ Boolean (verdadeiro ou falso)
+    true → verdadeiro
+    false → falso
+
+
+
+🕳️ Null
+    Valor nulo, propositalmente vazio
+    EX: let idade = null;
+
+
+❓ Undefined
+    Algo que ainda não foi definido
+    EX: let nome;
+        console.log(nome); // undefined
+
+
+📦 Object (objetos e arrays)
+    Conjunto de dados
+    EX: let pessoa = {
+            nome: "Tamires",
+            idade: 24
+        };
+
+    Array (lista de valores):
+    EX: let frutas = ["maçã", "banana", "uva"];
+
+
+⚙️ Function (funções)
+    Blocos de código que podem ser chamados:
+    EX: function dizerOla() {
+            console.log("Olá!");
+        }
