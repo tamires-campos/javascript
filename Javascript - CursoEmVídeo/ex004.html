@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual é o seu nome? ')
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras</br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()} </br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}`)
+    </script>
+
+
+
+<!--
+✍️ Manipulação de Strings
+            Método	                      Função	                                                      Exemplo
+            s.length	                  Retorna o tamanho da string	                                  "Olá".length → 3
+            s.toUpperCase()	              Transforma em maiúsculas	                                      "tamires".toUpperCase() → "TAMIRES"
+            s.toLowerCase()	              Transforma em minúsculas	                                      "TAMIRES".toLowerCase() → "tamires"
+            s.trim()	                  Remove espaços em branco no início e fim	                      " oi ".trim() → "oi"
+            s.includes("txt")	          Verifica se a string contém um texto específico	              "Olá mundo".includes("mundo") → true
+            s.startsWith("txt")	          Verifica se a string começa com determinado texto	              "JavaScript".startsWith("Java") → true
+            s.endsWith("txt")	          Verifica se a string termina com determinado texto	          "imagem.png".endsWith(".png") → true
+            s.replace("antigo", "novo")	  Substitui parte da string	                                      "Olá, mundo".replace("mundo", "Tamires") → "Olá, Tamires"
+            s.slice(início, fim)	      Retorna parte da string (posição inicial e final)	              "JavaScript".slice(0, 4) → "Java"
+            s.substring(início, fim)	  Parecido com slice, mas sem aceitar números negativos	          "JavaScript".substring(4, 10) → "Script"
+            s.split("separador")	      Divide a string em partes e retorna um array	                  "nome,sobrenome".split(",") → ["nome", "sobrenome"]
+
+-->
+</body>
+</html>

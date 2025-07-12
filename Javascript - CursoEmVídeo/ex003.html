@@ -24,12 +24,18 @@
 
         <script>
             
-          var n1 = Number(window.prompt('Digite um número: '))  
-          var n2 = Number(window.prompt('Digite outro número: '))  
-          var s = n1 + n2
-          window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+          var n1 = Number(window.prompt('Digite um número: '))      //abre uma caixinha no navegador para o usuário digitar algo
+          var n2 = Number(window.prompt('Digite outro número: '))   //abre uma caixinha no navegador para o usuário digitar algo 
+          var s = n1 + n2                                           //Faz a soma dos dois valores e guarda o resultado na variável s
+          window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) //As crases ` ` indicam uma template string, que permite usar ${variável} dentro do texto.
 
         </script>
+
+
+
+
+
+
 
         <!--
             🧠 Conversões em JavaScript
@@ -52,7 +58,7 @@
             número + número	       Soma matemática	                 10 + 5 → 15
 
             💬 Template String
-            Usa crase ` (e não aspas simples ou duplas)
+            Usa crase `` (e não aspas simples ou duplas)
 
             Pode inserir variáveis com ${variável}
             📌 Exemplo:
@@ -83,6 +89,7 @@
             Exemplo:
             let n1 = 10;
             console.log(n1.toFixed(2)); // "10.00"
+                        n1.toFixed(2).replace('.'  ,  ',') irá trocar ponto '.' por virgula ','
 
             🌍 n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
             O que faz: Formata o número como moeda, de acordo com o idioma e estilo definidos.
