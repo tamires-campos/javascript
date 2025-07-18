@@ -37,6 +37,116 @@
             s.substring(início, fim)	  Parecido com slice, mas sem aceitar números negativos	          "JavaScript".substring(4, 10) → "Script"
             s.split("separador")	      Divide a string em partes e retorna um array	                  "nome,sobrenome".split(",") → ["nome", "sobrenome"]
 
+
+✨ Operadores Aritméticos em JavaScript
+
+| Operação         | Exemplo  | Resultado | Significado           |
+| ---------------- | -------- | --------- | --------------------- |
+| Soma             | `5 + 2`  | `7`       | Adição                |
+| Subtração        | `5 - 2`  | `3`       | Subtração             |
+| Multiplicação    | `5 * 2`  | `10`      | Multiplicação         |
+| Divisão          | `5 / 2`  | `2.5`     | Divisão real          |
+| Resto da divisão | `5 % 2`  | `1`       | Módulo (resto)        |
+| Potência         | `5 ** 2` | `25`      | Potenciação (5² = 25) |
+
+
+
+
+🎯 Ordem de Precedência dos Operadores
+1.  () → Parênteses
+
+2.  ** → Potência
+
+3.  *, /, % → Multiplicação, Divisão e Resto
+ 
+4.  +, - → Soma e Subtração
+
+EX: var resultado = 5 + 3 * 2    // resultado será 11, porque faz 3*2 primeiro → 6 + 5 = 11
+
+
+
+📌 Exemplo de Cálculos Passo a Passo:
+var a = 5 + 3          // a = 8
+var b = a % 5          // b = 8 % 5 = 3
+var c = 5 * b**2       // c = 5 * (3 ** 2) = 5 * 9 = 45
+var d = 10 - a / 2     // d = 10 - (8 / 2) = 10 - 4 = 6
+var e = 6 * 2 / d      // e = 12 / 6 = 2
+var f = b % e + 4 / e  // f = 3 % 2 + 4 / 2 = 1 + 2 = 3
+
+
+
+🔁 Operadores de Atribuição e Incremento
+| Operação      | Forma longa  | Forma reduzida | Resultado                           |
+| ------------- | ------------ | -------------- | ----------------------------------- |
+| Soma          | `n = n + 4`  | `n += 4`       | Soma 4 ao valor de `n`              |
+| Subtração     | `n = n - 5`  | `n -= 5`       | Subtrai 5 de `n`                    |
+| Multiplicação | `n = n * 4`  | `n *= 4`       | Multiplica `n` por 4                |
+| Divisão       | `n = n / 2`  | `n /= 2`       | Divide `n` por 2                    |
+| Potência      | `n = n ** 2` | `n **= 2`      | Eleva `n` ao quadrado               |
+| Resto         | `n = n % 5`  | `n %= 5`       | `n` recebe o resto da divisão por 5 |
+
+
+
+
+⚠️ Sobre n++ e n--:
+n++ → Soma 1 ao valor (pós-incremento)
+
+n-- → Subtrai 1 (pós-decremento)
+
+EX: var n = 3
+n++    // agora n = 4
+n--    // volta para 3
+
+
+
+✅ Operadores Relacionais
+Comparam dois valores e retornam true ou false:
+
+5  > 2   // true  → 5 é maior que 2
+7  < 4   // false → 7 é menor que 4? Não
+8 >= 8   // true  → 8 é maior ou igual a 8
+9 <= 7   // false → 9 é menor ou igual a 7? Não
+5 == 5   // true  → igualdade de valor
+4 != 4   // false → diferente? Não, são iguais
+
+
+
+🆔 Operadores de Identidade
+Comparam valor e/ou tipo:
+
+5 == 5       // true  → valor igual
+5 == '5'     // true  → valor igual, ignora tipo (conversão implícita)
+5 === '5'    // false → valor igual, mas tipos diferentes (número vs string)
+5 === 5      // true  → valor e tipo iguais
+✅ == compara valores
+⚠️ === compara valores e tipos
+
+
+🔁 Operadores Lógicos
+| Operador | Nome    | Exemplo         | Resultado |        |   |         |      |
+| -------- | ------- | --------------- | --------- | ------ | - | ------- | ---- |
+| `!`      | Negação | `!true`         | false     |        |   |         |      |
+| `&&`     | E (AND) | `true && false` | false     |        |   |         |      |
+| `||`     |Ou (OR)  |`true  || false` | true      |
+
+
+
+🧮 Ordem de Precedência
+Aritméticos ( + - * / % )
+
+Relacionais ( > < >= <= == != )
+
+Lógicos ( ! && || )
+
+
+
+❓ Operador Ternário
+Forma curta de fazer uma verificação condicional (if/else):
+var media = 5.5;
+media > 7 ? 'APROVADO' : 'REPROVADO'; // Resultado: 'REPROVADO'
+Estrutura:
+condição ? valorSeVerdadeiro : valorSeFalso
+
 -->
 </body>
 </html>
