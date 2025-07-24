@@ -16,30 +16,65 @@
     <h1>Primeiros passos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim!</div>
+    <div id="msg">Clique em mim!</div> <!-- O id é um identificador único para o elemento, permitindo que ele seja facilmente selecionado e manipulado via JavaScript. -->
+    <div name="msg">Olha eu aqui!</div> <!-- O atributo name é usado para identificar o elemento, mas não é único como o id. É mais comum em formulários, onde vários elementos podem compartilhar o mesmo nome. -->
+    <div class="msg">Olha eu aqui!</div> <!-- A classe é usada para agrupar elementos que compartilham o mesmo estilo ou comportamento. Vários elementos podem ter a mesma classe, permitindo aplicar estilos CSS ou selecionar esses elementos via JavaScript. -->
+
 
     <script>
-        var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p')[0]
-        //window.document.write('Está escrito assim: ' + p1.innerText)
-        p1.style.color = 'black'
-        corpo.style.background = 'red'
+        /*window.document.write("Olá, Mundo!" + "<br>") //Exibe "Olá, Mundo!" na página. O + "<br>" adiciona uma quebra de linha HTML
+        window.document.write(window.document.charset + "<br>") //charset é a abreviação de "character set", ou seja, conjunto de caracteres. Ele define como os textos da sua página HTML devem ser codificados e interpretados, principalmente acentos, letras especiais (como ç, ñ), símbolos, emojis, etc.
+        window.document.write(window.navigator.appName + "<br>") //Exibe o nome do navegador que está executando o código. Porém, hoje em dia quase todos os navegadores retornam "Netscape", por causa de compatibilidade antiga (mesmo sendo Chrome ou Firefox)... Lá nos anos 1990, existiam dois grandes navegadores:Netscape Navigator e o Internet Explorer (da Microsoft) e cada um deles interpretavam o JavaScript de formas diferentes. A solução: compatibilidade
+        window.document.write(window.document.URL + "<br>") */ // URL significa Uniform Resource Locator, em português: Localizador Uniforme de Recursos. É basicamente o endereço de um recurso na internet, como uma página web, uma imagem, um vídeo ou um arquivo.
+        
+        /*var p1 = window.document.getElementsByTagName('p')[0] //Seleciona o primeiro parágrafo da página. getElementsByTagName('p') retorna uma coleção de todos os elementos <p> no documento, e [0] seleciona o primeiro deles.
+        window.document.write("Está escrito assim: " + p1.innerText) //Exibe o texto do primeiro parágrafo na página. O método getElementsByTagName('p') retorna uma coleção de todos os elementos <p> no documento, e [0] seleciona o primeiro deles. innerText retorna o texto contido nesse elemento.
+        Window.document.write("Está escrito assim: " + p1.innerHTML) //Exibe o conteúdo HTML do primeiro parágrafo na página. innerHTML retorna o HTML interno do elemento, incluindo tags HTML. podemos perceber que a tag strong dentro do parágrafo é exibida como parte do conteúdo HTML.
+        p1.style.color = "yellow" */ //Altera a cor do texto do primeiro parágrafo para amarelo. A propriedade style permite modificar o estilo CSS do elemento diretamente via JavaScript.
+
+        /*var d = window.document.getElementById('msg') //Seleciona o elemento com o ID "msg". getElementById('msg') retorna o elemento HTML que possui o atributo id igual a "msg".
+        d.style.background = "black" //Altera o fundo do elemento selecionado para preto. A propriedade style permite modificar o estilo CSS do elemento diretamente via JavaScript.
+        d.innerText = "Olá, Mundo!" */ //Altera o texto do elemento selecionado para "Olá, Mundo!". innerText define o texto contido no elemento.
+
+        //var d = window.document.getElementsByName('msg') //Name
+        //var d = window.document.getElementsByClassName('msg') //Class
+
+        var d = window.document.querySelector('div#msg') // quando é "id = # " e quando é "classe = ."  
+        d.style.background = "black" //Altera o fundo do elemento selecionado para preto.
+
     </script>
 
 
 
 <!--
-window 1 location
-       2 document -> HTML 1 head -> meta, title
-       3 history          2 body - > h1, p, p -> strong, div
+window
+├── location          ← URL da página, redirecionamento, etc.
+├── history           ← Histórico de navegação (voltar, avançar)
+└── document          ← Representa todo o HTML da página
+    └── HTML
+        ├── head
+        │   ├── meta
+        │   └── title
+        └── body
+            ├── h1
+            ├── p
+            ├── p
+            │   └── strong
+            └── div
 
 
-selecionando por:
-marca -> getElementsByTagName()  # consigo selecionar mais de 1 elemento 
-ID ->
-nome
-classe
-seletor
+
+🧭 Seletores no JavaScript (DOM)
+marca -> getElementsByTagName()    # consigo selecionar mais de 1 elemento 
+ID -> getElementById()             # consigo selecionar apenas 1 elemento
+nome -> getElementsByName()        # consigo selecionar mais de 1 elemento
+classe -> getElementsByClassName() # consigo selecionar mais de 1 elemento
+MAIS RECOMENDADO!
+seletor -> querySelector()         # consigo selecionar apenas 1 elemento
+seletor -> querySelectorAll()      # consigo selecionar mais de 1 elemento
+
+
+    
 
 
 -->
