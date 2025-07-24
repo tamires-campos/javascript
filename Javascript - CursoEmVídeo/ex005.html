@@ -4,13 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM - Document Object Model</title>
+    <style>
+        body{
+            background: rgb(64, 64, 228);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
 </head>
 <body>
     <h1>Primeiros passos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim!</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //window.document.write('Está escrito assim: ' + p1.innerText)
+        p1.style.color = 'black'
+        corpo.style.background = 'red'
+    </script>
+
+
+
+<!--
+window 1 location
+       2 document -> HTML 1 head -> meta, title
+       3 history          2 body - > h1, p, p -> strong, div
+
+
+selecionando por:
+marca -> getElementsByTagName()  # consigo selecionar mais de 1 elemento 
+ID ->
+nome
+classe
+seletor
+
+
+-->
+
 </body>
 </html>
 
 
 
 
-DOM - Document Object Model
