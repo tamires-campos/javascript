@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20px Arial, sans-serif; /*Equivalente a escrever: font-style: normal; font-size: 20px; font-family: Arial, sans-serif; */
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /* Alinha o texto verticalmente no centro, pois nesse caso o elemento tem 200px, então Isso faz o texto ficar centralizado verticalmente */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()">
+        Interaja...
+    </div>
+
+
+    <script>
+        function clicar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Clicou!';
+        }
+
+        function entrar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Entrou!';
+        }
+
+    </script>
+
+    <!--
+
+    Alguns eventos comuns do DOM: https://developer.mozilla.org/en-US/docs/Web/Events
+
+    mouseenter: Quando o mouse entra na área do elemento.
+    mouseleave: Quando o mouse sai da área do elemento.
+    mouseover: Quando o mouse passa sobre o elemento ou seus filhos.
+
+    </script>
+
+    <!--
+
+    Alguns eventos comuns do DOM: https://developer.mozilla.org/en-US/docs/Web/Events
+
+    mouseenter: Quando o mouse entra na área do elemento.
+    mouseleave: Quando o mouse sai da área do elemento.
+    mouseover: Quando o mouse passa sobre o elemento ou seus filhos.
+    mouseout: Quando o mouse sai do elemento ou de seus filhos.
+    mousemove: Quando o mouse se move dentro do elemento.
+    click: Quando o elemento é clicado.
+    dblclick: Quando o elemento é clicado duas vezes.
+    mousedown: Quando o botão do mouse é pressionado sobre o elemento.
+    mouseup: Quando o botão do mouse é liberado sobre o elemento.
+    contextmenu: Quando o menu de contexto é aberto (geralmente com o botão direito do mouse).
+    focus: Quando o elemento recebe foco (geralmente usado com campos de formulário).
+    blur: Quando o elemento perde o foco.
+    keydown: Quando uma tecla é pressionada enquanto o elemento tem foco.
+    keyup: Quando uma tecla é liberada enquanto o elemento tem foco.
+    keypress: Quando uma tecla é pressionada e liberada enquanto o elemento tem foco.
+    change: Quando o valor de um elemento de formulário é alterado (geralmente usado com inputs e selects).
+    input: Quando o valor de um elemento de formulário é alterado (similar ao change, mas é acionado imediatamente após a alteração).
+    submit: Quando um formulário é enviado. 
+    reset: Quando um formulário é redefinido.
+    scroll: Quando o elemento é rolado (scroll).
+    resize: Quando a janela do navegador é redimensionada.
+    touchstart: Quando o usuário toca na tela (dispositivos móveis).
+    touchend: Quando o usuário levanta o dedo da tela (dispositivos móveis).    
+    touchmove: Quando o usuário move o dedo na tela (dispositivos móveis).
+    drag: Quando o elemento é arrastado.
+    dragstart: Quando o arrasto do elemento começa.
+    dragend: Quando o arrasto do elemento termina.
+    dragenter: Quando o elemento arrastado entra na área de destino.
+    dragleave: Quando o elemento arrastado sai da área de destino.
+    ...
+
+
+    function ação(PARAMETROS){
+        BLOCO
+    }
+
+
+    -->
+</body>
+</html>
