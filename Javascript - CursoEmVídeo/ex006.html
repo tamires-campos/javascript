@@ -17,36 +17,53 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()">
+    <div id="area">  <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" ondblclick="doisclicks()" oncontextmenu="resetar()"    esse código só seria necessário se não estivesse usando "addEventListener" nas linhas 28 a 32 logo abaixo -->
         Interaja...
     </div>
 
 
     <script>
+        var a = window.document.getElementById('area')
+
+        // colocando aqui o "addEventistener"  o código ficará mais organizado
+        a.addEventListener('click', clicar);        // Adiciona o evento click para chamar a função clicar
+        a.addEventListener('mouseover', entrar);    // Adiciona o evento mouseover para chamar a função entrar
+        a.addEventListener('mouseout', sair);       // Adiciona o evento mouseout para    chamar a função sair
+        a.addEventListener('dblclick', doisclicks); // Adiciona o evento dblclick para chamar a função doisclicks
+        a.addEventListener('contextmenu', resetar); // Adiciona o evento context
+
         function clicar() {
-            var a = window.document.getElementById('area')
-            a.innerText = 'Clicou!';
+            a.innerText = 'Clicou!'; // Aqui o texto é alterado quando o elemento é clicado
         }
 
-        function entrar() {
-            var a = window.document.getElementById('area')
-            a.innerText = 'Entrou!';
+        function entrar() { 
+            a.innerText = 'Entrou!'; // Aqui o texto é alterado quando o mouse entra na área do elemento
         }
+
+        function sair() {
+            a.innerText = 'Saiu!'; // Aqui o texto é alterado quando o mouse sair da área do elemento
+        }
+
+        function doisclicks() {
+            a.style.background = 'red'; // Aqui o fundo é alterado quando o elemento é clicado duas vezes
+        }
+
+        function resetar() {
+            a.innerText = 'Interaja...'; // Aqui o texto é resetado para o original qnd clicar com botão direto do mouse
+            a.style.background = 'green'; // Aqui o fundo é resetado para o original qnd clicar com botão direto do mouse
+        }
+
 
     </script>
 
     <!--
-
-    Alguns eventos comuns do DOM: https://developer.mozilla.org/en-US/docs/Web/Events
 
     mouseenter: Quando o mouse entra na área do elemento.
     mouseleave: Quando o mouse sai da área do elemento.
     mouseover: Quando o mouse passa sobre o elemento ou seus filhos.
-
-    </script>
+    -->
 
     <!--
-
     Alguns eventos comuns do DOM: https://developer.mozilla.org/en-US/docs/Web/Events
 
     mouseenter: Quando o mouse entra na área do elemento.
